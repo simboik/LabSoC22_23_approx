@@ -1,0 +1,47 @@
+# import the yosys commands
+yosys -import
+
+# read in verilog files from folder 'models'
+yosys read_verilog ./tmp/*.v
+
+# open a tmpfile
+# set temp [exec mktemp]
+set temp var.txt
+
+# save module names in the tmpfile
+tee -o $temp ls
+
+# read the temp file
+set file [open $temp r]
+set lines [split [read $file] "\n"]
+close $file
+
+# save module names, located at the last 2 lines of the tmp file, remove whitespaces in module names
+set module_1 [lindex $lines end-2]
+set module_1 [string trimleft $module_1] 
+puts $module_1
+set module_2 [lindex $lines end-1]
+set module_2 [string trimleft $module_2]
+puts $module_2
+    
+# cleanup
+# file delete $temp
+
+# create the miter
+miter -equiv -flatten -make_outputs $module_1 $module_2 EX_vs_APP
+
+opt -full
+
+write_verilog EX_vs_APP.v
+
+#show EX_vs_APP
+
+#stat
+
+# delete all modules except the miter
+delete $module_1
+delete $module_2
+
+synth
+
+write_blif EX_vs_APP.blif

@@ -1,0 +1,3 @@
+Solver Worklflow
+
+./nbc_minisat_all COMP.cnf COMP.map

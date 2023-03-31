@@ -1,0 +1,7 @@
+Blif Workflow
+
+verena@verena-ThinkPad-X1-Yoga-3rd:~/Schreibtisch/LabSOC/error-metrics-determination$ ./mappedblif2cnf.pl -m COMP.blif 
+in_B[0] in_B[1] in_B[2] in_B[3] in_B[4] in_B[5] in_B[6] in_B[7] in_B[8] in_B[9] in_B[10] in_B[11] in_B[12] in_B[13] in_B[14] in_B[15] in_B[16] in_B[17] in_B[18] in_B[19] in_B[20] in_B[21] in_B[22] in_B[23] in_B[24] in_B[25] in_B[26] in_B[27] in_B[28] in_B[29] in_B[30] in_B[31] in_A[0] in_A[1] in_A[2] in_A[3] in_A[4] in_A[5] in_A[6] in_A[7] in_A[8] in_A[9] in_A[10] in_A[11] in_A[12] in_A[13] in_A[14] in_A[15] in_A[16] in_A[17] in_A[18] in_A[19] in_A[20] in_A[21] in_A[22] in_A[23] in_A[24] in_A[25] in_A[26] in_A[27] in_A[28] in_A[29] in_A[30] in_A[31] 
+trigger 
+verena@verena-ThinkPad-X1-Yoga-3rd:~/Schreibtisch/LabSOC/error-metrics-determination$ 
+
